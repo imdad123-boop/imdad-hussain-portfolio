@@ -1,2 +1,2 @@
-# Resume
-My resume from complete web development course
+#portfolio
+My portfolio is about front end web  development
