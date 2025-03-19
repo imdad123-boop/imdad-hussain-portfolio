@@ -36,7 +36,7 @@ body {
 }
 /* ✅ Navbar */
 nav {
-    position: absolute;
+    position:absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -88,6 +88,10 @@ nav ul li a:hover::after {
     transform: scaleX(1);
 }
 
+#sidemenu{
+    position: relative;
+    left: 200px;
+}
 /* ✅ Front-end Developer Text Animation */
 .header-text {
     position: absolute;
@@ -184,10 +188,12 @@ nav ul li a:hover::after {
 }
 
 /* Sub Title */
-.sub-title {
+#sub-title-1 {
     font-size: 60px;
-    font-weight: 600;
-    color: #fff;
+    font-weight: 60;
+    color: #f4ec07;
+    position:relative;
+    left:-10px;
 }
 
 /* Tab Titles */
@@ -242,7 +248,13 @@ nav ul li a:hover::after {
 /*-------------Services---------------------*/
 #services{
     padding:30px 0;
-
+}
+#sub-title-2{
+    font-size: 60px;
+    font-weight: 60;
+    color: rgb(247, 251, 13);
+    position:relative;
+    left:-3px;
 }
 .services-list{
      display: grid;
@@ -295,11 +307,14 @@ transform: translateY(-10px);
 }
 
 /* Subtitle styling */
-.sub-title {
+#sub-title-3 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size:60px;
+    font-weight: 60;
     margin-bottom: 30px;
-    color:white;
+    color:hsl(63, 98%, 51%);
+    position: relative;
+    left: -470px;
 }
 
 /* Grid layout for work items */
@@ -382,11 +397,13 @@ transform: scale(1.1);
 /*--------------------------Contact----------------------------*/
 .contact-left{
     flex-basis:35%;
+position:relative;
+left:150px;
 }
-.sub-title{
+.sub-title-4{
     color: #ff0;
     position: relative;
-    left:-85px;
+    left:24px;
 }
 .contact-right{
     flex-basis:60%;
@@ -435,6 +452,9 @@ form input,form textarea{
     font-size: 18px;
     border-radius: 6px; 
 }
+textarea{
+    height: 30vh;
+}
 form .btn2{
 padding:14px 60px;
 font-size:18px;
@@ -455,68 +475,52 @@ background-color: #ff004f;
     color: #ff004f;
 }
 
-nav.fa-solid{
+
+/*--------------------CSS For Small Screen---------------------------*/
+i.fa-solid {
     display: none;
 }
-/*--------------------CSS For Small Screen---------------------------*/
-@media only screen and (max-width:600px){
-     
-#header{
-    background-image: url(background.png.png);
-}
-.header-text{
-    margin-top: 100%;
-    font-size:16px;
-}
-.header-text h1{
-    font-size: 30px;
 
-}
-nav.fa-solid{
-    display:block; 
-    font-size: 25px;
-}
-nav ul{
-    background: #ff004f;
-    position: fixed;
-    top: 0;
-    right: -200px;
-    width: 200px;
-    height: 100vh;
-    padding-top:50px;
-    z-index:5;
-}
-nav ul li{
-    display: block;
-   margin: 25px;
-}
-nav ul .fa-solid{ 
-    position: absolute; 
-    top:25px;
-    left:25px; 
-  cursor: pointer;
-}
-.sub-title{
-    font-size: 40px;
-    left:20px;
-    about-col-1, .about-col-2{
-flex-basis: 100%;
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url('background.png'); /* Keeping the background image */
+        background-size: cover; /* Ensures the image covers the whole header area */
     }
-}
-.about-col-1 img{
-    margin-bottom:20px;
-    margin-top: 40px;
-   position:relative;
-   left:50px;
-   height: 350px;
-}
 
-.about-col-2{
-    font-size: 14px;
-}
-.tab-link{
-    font-size: 16px;
-    margin-right: 25px;
-}
+    .header-text {
+        margin-top: 70%;
+        font-size: 16px;
+    }
 
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    i.fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        background: #ff004f; /* Menu bar color */
+        padding-top: 50px;
+    }
+
+    nav ul {
+        list-style: none; /* Remove default list styles */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+        font-size: 18px; /* Optional, adjust menu item font size */
+        text-align: center; /* Center text in the menu items */
+    }
 }
