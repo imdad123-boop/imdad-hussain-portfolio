@@ -6,164 +6,184 @@
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome CDN -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="header">
         <div class="container">
         </div>
-        <nav>
-            <h1>Imdad Hussain!</h1>
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li> 
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav> 
-        <div class="header-text">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Imdad Hussain</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#header">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header-text text-center mt-5">
             <p>Front-end Developer</p>
-            <h3>I'm ! <span id="type" class="auto_type" style="color:orange;"></span></h3>
+            <h3 class="center-type"><span id="im">I'm </span><span id="type" class="auto_type" style="color:orange;"></span></h3>
+
         </div>
     </div>
+
+    <!-- About Section -->
     <div id="about">
-    <div class="container">
-    <div class="row">
-    <div class="about-col-1">
-    <img src="WhatsApp Image 2025-01-31 at 10.24.08 PM (2).jpeg">
-    </div>
-    <div class="about-col-2">
-    <h1 id="sub-title-1">About</h1>
-    <p>I am Imdad Hussain, a passionate and dedicated professional with a background in Economics and experience in data entry, computer operations, and supervision. I am also skilled in Frontend web development, with expertise in Bootstrap, jQuery, HTML, CSS, and JS, and back-end technologies.</p>
-    <div class="tab-titles">
-    <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
-    <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
-    <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
-    </div>
-    <div class="tab-contents active-tab" id="skills">
-    <ul>
-    <li><span>Bootstrap</span><br>Web and App development framework</li>
-    <li><span>Web Development</span><br>Building and designing websites and web applications</li>
-    <li><span>JavaScript (JS)</span><br>Programming language for dynamic web content</li>
-    <li><span>CSS</span><br>Styling websites and web applications</li>
-    <li><span>jQuery</span><br>JavaScript library for simplifying web development</li>
-    </ul>
-    </div>
-    <div class="tab-contents" id="experience">
-    <ul>
-    <li><span>2025-Current</span><br>Full Stack Web Development at Aptech Center Gulshan-2 Karachi</li>
-    <li><span>2022-2024</span><br>Assistant Accountant in a Traveling Agency</li>
-    <li><span>2021-2022</span><br>Data Entry Operator in a Garments Company</li>
-    </ul>
-    </div>
-    <div class="tab-contents" id="education">
-    <ul>
-    <li><span>2020</span><br>Advanced Excel at Aptech Center Jamshoro Sindh</li>
-    <li><span>2023</span><br>Computerized Accounting at IPA Karachi Sindh</li>
-    <li><span>2023</span><br>SAP Business One (SAP B1) at IPA Karachi Sindh</li>
-    <li><span>2014</span><br>Matriculation from Piaro Station (Board Hyderabad Sindh)</li>
-    <li><span>2016</span><br>Intermediate from Phulji Station (Board Hyderabad Sindh)</li>
-    <li><span>2016</span><br>BS Economics from University of Jamshoro Sindh</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!----------------------Sevices---------------------------------->
-<div id="services">
-<div class="container">
-    <h1 id="sub-title-2">My Services</h1>
-    <div class="services-list">
-        <div>
-            <i class="fa-solid fa-code"></i>
-            <h2>Web Design</h2>
-            <p>We offer customized web design services, focusing on modern layouts, user-friendly interfaces, and responsive design. We create websites that are visually appealing, functional, and tailored to your brand identity.</p>
-            <a href="#learn-more">Learn More</a>
-        </div>
-        <div>
-            <i class="fa-solid fa-crop-simple"></i>
-            <h2>Website Debugging</h2>
-            <p>If your website is slow or malfunctioning, we provide website debugging services. We identify and fix errors efficiently, ensuring your website runs smoothly and performs optimally.</p>
-            <a href="#learn-more">Learn More</a>
-        </div>
-        <div>
-            <i class="fa-brands fa-app-store"></i>
-            <h2>Mobile Application</h2>
-            <p>We also offer mobile application development services. We create innovative and user-friendly mobile apps tailored to your business, engaging your target audience. We develop apps for both Android and iOS platforms.</p>
-            <a href="#learn-more">Learn More</a>
-        </div>
-    </div>
-</div>
-</div>
-<!--------------------------Portfolio--------------------------------->
-<div id="portfolio">
-    <div class="container">
-        <h1 id="sub-title-3">My Work</h1>
-        <!-- The work-list should contain the work items -->
-        <div class="work-list">
-            <div class="work">
-                <img src="image1.jpg" style="height:49vh";>
-                <div class="layer">
-                    <h3>Social Media App</h3>
-                    <p>"I developed a social media app that facilitates seamless communication, content sharing, and real-time engagement. The app features messaging, multimedia sharing, and notifications, fostering an interactive community for users worldwide."</p>
-                    <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="Resume/dfa2badc-5106-412a-9691-8f4d100ab8e1.jpg" alt="Profile Image" class="img-fluid " >
                 </div>
-            </div>
-            <div class="work">
-                <img src="img5.jpg" width="350px">
-                <div class="layer">
-                    <h3>Online Shoping App</h3>
-                    <p> I Develop an intuitive online shopping app that allows users to browse products, make secure payments, track orders, and receive personalized recommendations, ensuring a seamless and responsive shopping experience across devices.</p>
-                    <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="img3.jpg">
-                <div class="layer">
-                    <h3>Music App</h3>
-                    <p>I Develop a music app enabling users to stream, organize, and discover music with personalized playlists, offline listening, and real-time recommendations, ensuring a smooth and responsive experience across mobile and tablet devices.</p>
-                    <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                <div class="col-md-6">
+                    <h1 id="sub-title-1">About</h1>
+                    <p>I am Imdad Hussain, a passionate and dedicated professional with a background in Economics and experience in data entry, computer operations, and supervision. I am also skilled in Frontend web development, with expertise in Bootstrap, jQuery, HTML, CSS, and JS, and back-end technologies.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Bootstrap</span><br>Web and App development framework</li>
+                            <li><span>Web Development</span><br>Building and designing websites and web applications</li>
+                            <li><span>JavaScript (JS)</span><br>Programming language for dynamic web content</li>
+                            <li><span>CSS</span><br>Styling websites and web applications</li>
+                            <li><span>jQuery</span><br>JavaScript library for simplifying web development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2025-Current</span><br>Full Stack Web Development at Aptech Center Gulshan-2 Karachi</li>
+                            <li><span>2022-2024</span><br>Assistant Accountant in a Traveling Agency</li>
+                            <li><span>2021-2022</span><br>Data Entry Operator in a Garments Company</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>Advanced Excel at Aptech Center Jamshoro Sindh</li>
+                            <li><span>2023</span><br>Computerized Accounting at IPA Karachi Sindh</li>
+                            <li><span>2023</span><br>SAP Business One (SAP B1) at IPA Karachi Sindh</li>
+                            <li><span>2014</span><br>Matriculation from Piaro Station (Board Hyderabad Sindh)</li>
+                            <li><span>2016</span><br>Intermediate from Phulji Station (Board Hyderabad Sindh)</li>
+                            <li><span>2016</span><br>BS Economics from University of Jamshoro Sindh</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn" >See More</a>
     </div>
-</div>
-<!---------------------Contact------------------------------------->
-<div id="contact">
-<div class="container">
-    <div class="row">
-        <div class="contact-left">
-            <h1 class="sub-title-4">Contact Me </h1>
-            <p> <i class="fa-solid fa-paper-plane"></i>ih8262248@gmail.com</p>
-            <p> <i class="fa-solid fa-phone-volume"></i>03478010663</p>
-            <div class="social-icons">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-square-whatsapp"></i></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
+
+    <!-- Services Section -->
+    <div id="services">
+        <div class="container">
+            <h1 id="sub-title-2" class="text-center">My Services</h1>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="fa-solid fa-code fa-3x"></i>
+                    <h2>Web Design</h2>
+                    <p>We offer customized web design services, focusing on modern layouts, user-friendly interfaces, and responsive design. We create websites that are visually appealing, functional, and tailored to your brand identity.</p>
+                    <a href="#learn-more">Learn More</a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fa-solid fa-crop-simple fa-3x"></i>
+                    <h2>Website Debugging</h2>
+                    <p>If your website is slow or malfunctioning, we provide website debugging services. We identify and fix errors efficiently, ensuring your website runs smoothly and performs optimally.</p>
+                    <a href="#learn-more">Learn More</a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fa-brands fa-app-store fa-3x"></i>
+                    <h2>Mobile Application</h2>
+                    <p>We also offer mobile application development services. We create innovative and user-friendly mobile apps tailored to your business, engaging your target audience. We develop apps for both Android and iOS platforms.</p>
+                    <a href="#learn-more">Learn More</a>
+                </div>
             </div>
-            <a href="Imdad_Hussain_Resume.pdf" download class="btn btn2">Dawnload CV</a>
-        </div>
-        <div class="contact-right">
-            <form>
-                <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="Message" row="6" id="message" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn btn2" >Submit</button>
-            </form>
         </div>
     </div>
-</div>
-<div class="copyright">
-    <p>Copyright © Imdad Hussain 2025.<i class="fa-solid fa-heart"></i> All Rights Reserved.</p>
-</div>
-</div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 id="sub-title-3" class="text-center">My Work</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="work">
+                        <img src="image1.jpg" class="img-fluid">
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>"I developed a social media app that facilitates seamless communication, content sharing, and real-time engagement. The app features messaging, multimedia sharing, and notifications, fostering an interactive community for users worldwide."</p>
+                            <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="work">
+                        <img src="img5.jpg" class="img-fluid">
+                        <div class="layer">
+                            <h3>Online Shoping App</h3>
+                            <p> I develop an intuitive online shopping app that allows users to browse products, make secure payments, track orders, and receive personalized recommendations, ensuring a seamless and responsive shopping experience across devices.</p>
+                            <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="work">
+                        <img src="img3.jpg" class="img-fluid">
+                        <div class="layer">
+                            <h3>Music App</h3>
+                            <p>I develop a music app enabling users to stream, organize, and discover music with personalized playlists, offline listening, and real-time recommendations, ensuring a smooth and responsive experience across mobile and tablet devices.</p>
+                            <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn btn-primary d-block mx-auto">See More</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="sub-title-4">Contact Me </h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> ih8262248@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i> 03478010663</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="Modern Minimalist CV Resume (1).pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" class="form-control mb-3" required>
+                        <input type="email" name="email" placeholder="Your Email" class="form-control mb-3" required>
+                        <textarea name="Message" rows="6" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2 btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <p>Copyright © Imdad Hussain 2025. <i class="fa-solid fa-heart"></i> All Rights Reserved.</p>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed(".auto_type", {
@@ -173,26 +193,19 @@
             loop: true
         });
 
-        // Get all the tab links and tab contents
+        // Tab function for About section
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
 
-        // Function to open a tab and display the corresponding content
         function opentab(event, tabname) {
-            // Remove 'active-link' class from all tab links
             for (let tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
-
-            // Remove 'active-tab' class from all tab contents
             for (let tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
             }
 
-            // Add 'active-link' class to the clicked tab link
             event.currentTarget.classList.add("active-link");
-
-            // Add 'active-tab' class to the corresponding tab content
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
@@ -205,5 +218,6 @@
             sidemenu.style.right = "-200px";
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
