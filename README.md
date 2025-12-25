@@ -27,6 +27,10 @@ CSS
 
 JavaScript
 
+PHP
+
+Mysql
+
 (Update this list if you’re using React, Tailwind, etc.)
 
 🎯 Purpose
